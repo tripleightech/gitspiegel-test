@@ -22,4 +22,4 @@ pr-custom-review:
       --depth 1
       --branch tag
       https://github.com/joao-paulo-parity/pr-custom-review
-    - node pr-custom-review/dist/index.js
+    - node pr-custom-review/dist/gitlab/index.js
