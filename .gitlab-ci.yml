@@ -1,0 +1,23 @@
+default:
+  interruptible:                   true
+  retry:
+    max: 2
+    when:
+      - runner_system_failure
+      - unknown_failure
+      - api_failure
+  tags:
+    - testlab-runner-1
+
+pr-custom-review:
+  image: timbru31/node-alpine-git:16
+  variables:
+    GITHUB_ORG:                    tripleightech
+    GITHUB_REPO:                   gitspiegel-test
+    GITHUB_TOKEN:                  $PRCR_TOKEN
+  script:
+    - git clone
+      --depth 1
+      --branch tag
+      https://github.com/joao-paulo-parity/pr-custom-review
+    - node dist/index.js
