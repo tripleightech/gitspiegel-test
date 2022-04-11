@@ -11,6 +11,8 @@ default:
 
 pr-custom-review:
   image: timbru31/node-alpine-git:16
+  rules:
+    - if: $CI_COMMIT_REF_NAME =~ /^[0-9]+$/
   variables:
     GITHUB_ORG:                    tripleightech
     GITHUB_REPO:                   gitspiegel-test
@@ -20,4 +22,4 @@ pr-custom-review:
       --depth 1
       --branch tag
       https://github.com/joao-paulo-parity/pr-custom-review
-    - node dist/index.js
+    - node pr-custom-review/dist/index.js
