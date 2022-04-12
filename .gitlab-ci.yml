@@ -16,7 +16,6 @@ pr-custom-review:
   variables:
     GITHUB_ORG:                    tripleightech
     GITHUB_REPO:                   gitspiegel-test
-    GITHUB_TOKEN:                  $PRCR_TOKEN
   script:
     - git clone
       --depth 1
