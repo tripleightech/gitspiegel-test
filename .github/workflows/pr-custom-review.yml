@@ -1,0 +1,21 @@
+name: Assign reviewers
+
+on:
+  pull_request:
+    branches:
+      - master
+      - main
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - review_requested
+      - review_request_removed
+  pull_request_review:
+
+jobs:
+  pr-custom-review:
+    runs-on: self-hosted
+    steps:
+      - name: pr-custom-review
+        uses: joao-paulo-parity/pr-custom-review@tag
