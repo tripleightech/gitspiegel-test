@@ -15,7 +15,7 @@ on:
 
 jobs:
   pr-custom-review:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: pr-custom-review
         uses: joao-paulo-parity/pr-custom-review@tag
