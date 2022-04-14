@@ -1,8 +1,0 @@
-locks-review-team: pr-custom-review-team
-team-leads-team: jp
-action-review-team: pr-custom-review-team
-rules:
-  - name: foo
-    condition: foo
-    check_type: changed_files
-    min_approvals: 1
