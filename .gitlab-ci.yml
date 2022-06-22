@@ -1,6 +1,5 @@
-image: hello-world
-
 default:
+  image: "paritytech/tools:latest"
   tags:
     - testlab-docker
     
