@@ -1,5 +1,9 @@
 image: hello-world
 
+default:
+  tags:
+    - testlab-docker
+    
 stages:
   - check
 
