@@ -10,3 +10,4 @@ do-check:
   stage: check
   script:
     - echo "ok"
+
