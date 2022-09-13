@@ -9,4 +9,4 @@ stages:
 do-check:
   stage: check
   script:
-    - echo "ok3"
+    - echo "ok4"
