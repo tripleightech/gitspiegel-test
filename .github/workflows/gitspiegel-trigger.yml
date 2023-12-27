@@ -1,0 +1,17 @@
+name: gitspiegel sync
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - unlocked
+      - ready_for_review
+      - reopened
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger sync
+        run: echo trigger
