@@ -9,5 +9,4 @@ stages:
 do-check:
   sta ge: check
   sc ript:
-
     - echo "ok"
